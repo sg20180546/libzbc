@@ -402,7 +402,7 @@ extern const char *zbc_device_model_str(enum zbc_dev_model model);
 /**
  * @brief Device handle (opaque data structure).
  */
-struct zbc_device;
+// struct zbc_device;
 
 /**
  * @brief Device flags definitions.
