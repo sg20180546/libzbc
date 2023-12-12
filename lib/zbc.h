@@ -164,9 +164,9 @@ static inline void zbc_set_errno(enum zbc_sk sk, enum zbc_asc_ascq asc_ascq)
 /**
  * Test if a device is zoned.
  */
-#define zbc_dev_model(dev)	((dev)->zbd_info.zbd_model)
-#define zbc_dev_is_zoned(dev)	(zbc_dev_model(dev) == ZBC_DM_HOST_MANAGED || \
-				 zbc_dev_model(dev) == ZBC_DM_HOST_AWARE)
+
+// #define zbc_dev_is_zoned(dev)	(zbc_dev_model(dev) == ZBC_DM_HOST_MANAGED || \
+// 				 zbc_dev_model(dev) == ZBC_DM_HOST_AWARE)
 
 /**
  * Device open access mode and allowed drivers mask.

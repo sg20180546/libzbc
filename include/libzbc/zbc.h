@@ -26,6 +26,9 @@ extern "C" {
 #include <errno.h>
 #include <sys/uio.h>
 
+#define zbc_dev_model(dev)	((dev)->zbd_info.zbd_model)
+#define zbc_dev_is_zoned(dev)	(zbc_dev_model(dev) == ZBC_DM_HOST_MANAGED || \
+				 zbc_dev_model(dev) == ZBC_DM_HOST_AWARE)
 /**
  * @mainpage
  *
@@ -402,7 +405,7 @@ extern const char *zbc_device_model_str(enum zbc_dev_model model);
 /**
  * @brief Device handle (opaque data structure).
  */
-// struct zbc_device;
+struct zbc_device;
 
 /**
  * @brief Device flags definitions.
